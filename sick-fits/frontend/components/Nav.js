@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
-const Nav = () => {
-    return (
+const Nav = () => (
     <div>
         <Link href="/">
             <a>Home</a>
@@ -10,7 +9,6 @@ const Nav = () => {
             <a>Sell</a>
         </Link>   
     </div>
-    );
-}
+)
 
 export default Nav;
