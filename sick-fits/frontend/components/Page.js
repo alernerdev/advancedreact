@@ -29,11 +29,10 @@ injectGlobal`
   @font-face {
     font-family: 'radnika_next';
     src: url('/static/radnikanext-medium-webfont.woff2')
-    format('woff2');
+      format('woff2');
     font-weight: normal;
     font-style: normal;
-  }}
-
+  }
   html {
     box-sizing: border-box;
     font-size: 10px;
@@ -50,6 +49,8 @@ injectGlobal`
   }
   a {
     text-decoration: none;
+    /* not going through the theme provider here because
+    its at a global level */
     color: ${theme.black};
   }
 `;
