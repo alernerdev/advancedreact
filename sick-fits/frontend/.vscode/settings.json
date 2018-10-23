@@ -1,10 +1,18 @@
 {
+  "workbench.colorTheme": "Cobalt2",
+  "editor.matchBrackets": false,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
+  "editor.fontSize": 17,
+  "editor.lineHeight": 25,
+  "editor.cursorStyle":"line",
+  "editor.cursorWidth":3,
+  "editor.letterSpacing": 0.5,
+
   "workbench.colorCustomizations": {
     "titleBar.activeForeground": "#000",
     "titleBar.inactiveForeground": "#000000CC",
     "titleBar.activeBackground": "#FFC600",
     "titleBar.inactiveBackground": "#FFC600CC",
-    "editor.background": "#3b333300",
-
   }
 }
