@@ -1,0 +1,13 @@
+# this is the API that we are exposing -- it might be a subset of 
+# whats available from Prisma/GraphQL
+type Dog {
+  name: String!
+}
+
+type Mutation {
+    createDog(name: String!) : Dog
+}
+
+type Query {
+    dogs: [Dog]!
+}
