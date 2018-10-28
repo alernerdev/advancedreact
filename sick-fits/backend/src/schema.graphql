@@ -13,14 +13,14 @@
 #    dogs: [Dog]!
 # }
 
+
+
 # there is no standard import in graphql -- this is a prisma specific syntax
 # doing an import to get the Item "as is" so I dont have to retype it here
 # import * from './generated/prisma.graphql'
 type Mutation {
     createItem(title: String, description: String, price: Int, 
-        image: String, largeImage: String) : Item! {
-
-    }
+        image: String, largeImage: String) : Item!
 }
 
 type Query {
