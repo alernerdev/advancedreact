@@ -5,7 +5,7 @@ import Link from "next/link";
 import Title from "./styles/Title";
 import ItemStyles from "./styles/ItemStyles";
 import PriceTag from "./styles/PriceTag";
-import fromatMoney from "../lib/formatMoney";
+import formatMoney from "../lib/formatMoney";
 
 class Item extends Component {
   static propTypes = {

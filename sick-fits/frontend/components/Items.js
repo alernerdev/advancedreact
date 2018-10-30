@@ -34,17 +34,17 @@ export default class Items extends Component {
     return (
       <Center>
         <Query query={ALL_ITEMS_QUERY}>
-        {({ data, error, loading }) => {
+          {({ data, error, loading }) => {
+            console.log(data);
             if (loading) return <p>Loading ...</p>;
 
             if (error) return <p>Error: {error.message}</p>;
 
             if (!data || !data.items || data.items.length === 0) return <p>No inventory</p>
-            
-            return
-              <ItemsList>
-                {data.items.map(item => <p>{item.title}</p>)}
-              </ItemsList>
+
+            return <ItemsList>
+              {data.items.map(item => <Item item={item} key={item.id} />)}
+            </ItemsList>
           }}
         </Query>
       </Center>
