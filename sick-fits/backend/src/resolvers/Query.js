@@ -14,13 +14,16 @@ const Query = {
     /* if the yoga query is exactly the same as the prisma query and there is no additional logic,
     then we can simply forward it on
     */
-    // items: forwardTo('db'),
+   items: forwardTo('db'),
+   item: forwardTo('db'),
 
+    /*
     async items(parent, args, ctx, info) {
         console.log('getting items!!!!!');
         const items = await ctx.db.query.items();
         return items;
     }
+    */
 };
 
 module.exports = Query;

@@ -21,8 +21,12 @@
 type Mutation {
     createItem(title: String, description: String, price: Int, 
         image: String, largeImage: String) : Item!
+    updateItem(id: ID!, title:String, description:String, price:Int): Item!
 }
 
 type Query {
     items: [Item]!
+    # notice the returned item is not required -- in case we are looking for something 
+    # that doesnt exist
+    item(where: ItemWhereUniqueInput!): Item
 }
