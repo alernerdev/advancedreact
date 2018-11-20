@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import Header from "./Header";
-import Meta from "./Meta";
 import styled, { ThemeProvider, injectGlobal } from "styled-components";
 
-const theme = {
+import Header from "./Header";
+import Meta from "./Meta";
+
+
+const commonTheme = {
   red: "#FF0000",
   black: "#393939",
   grey: "#3A3A3A",
@@ -13,11 +15,13 @@ const theme = {
   bs: "0 12px 24px 0 rgba(0,0,0,0.09)"
 };
 
+// props are the attributes passed into StyledPage 
 const StyledPage = styled.div`
   background: white;
   color: ${props => props.theme.black};
 `;
 
+// narrower than the side to side header
 const Inner = styled.div`
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
@@ -49,16 +53,15 @@ injectGlobal`
   }
   a {
     text-decoration: none;
-    /* not going through the theme provider here because
-    its at a global level */
-    color: ${theme.black};
+    /* not going through the theme provider here because    its at a global level */
+    color: ${commonTheme.black};
   }
 `;
 
 export default class Page extends Component {
   render() {
     return (
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={commonTheme}>
         <StyledPage>
           <Meta />
           <Header />

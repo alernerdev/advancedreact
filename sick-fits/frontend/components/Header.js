@@ -2,8 +2,9 @@ import Nav from "./Nav";
 import Link from "next/link";
 import styled from "styled-components";
 import Router from "next/router";
-import NProgress from 'nprogress';
+import NProgress from 'nprogress'; // thin red progress bar line
 
+/* update the 'hourglass' status line at the top of the page*/
 Router.onRouteChangeStart = () => {
   NProgress.start();
 }

@@ -1,5 +1,6 @@
 import Head from "next/head";
 
+// nprogress css is for the thin status bar line that shows on menu clicks
 const Meta = () => (
   <Head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
