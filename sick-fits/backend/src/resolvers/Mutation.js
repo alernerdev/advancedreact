@@ -1,3 +1,5 @@
+/* mutations in this file have to match whats in the schema */
+
 const Mutations = {
 /*    
     createDog(parent, args, ctx, info) {
@@ -17,6 +19,7 @@ const Mutations = {
         // and this makes use of generated prisma.graphql
         const item = await ctx.db.mutation.createItem({
             data: {
+                // the arguments are simply spread
                 ...args
             }
         }, info);

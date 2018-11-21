@@ -1,5 +1,5 @@
 // this is the glue between the API and the actual source of data --
-// a rest point or a DB or Prisma
+// this can use anything for the data source: a rest point or a DB or Prisma
 
 const {forwardTo} = require('prisma-binding');
 

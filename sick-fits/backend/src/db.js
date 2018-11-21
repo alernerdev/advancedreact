@@ -1,10 +1,11 @@
-// this file connects to remote Prisma DB and lets us
-// query it with javascript
+/* 
+* this file connects to remote Prisma DB and allows to query it with javascript 
+*/
+
 const {Prisma} = require('prisma-binding');
 
 const db = new Prisma({
-    // generated stuff from Prisma
-    typeDefs: 'src/generated/prisma.graphql',
+    typeDefs: 'src/generated/prisma.graphql', // generated stuff from Prisma
     endpoint: process.env.PRISMA_ENDPOINT,
     secret: process.env.PRISMA_SECRET,
     debug: false

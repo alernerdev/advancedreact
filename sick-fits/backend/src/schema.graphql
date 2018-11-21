@@ -1,5 +1,5 @@
-# this is the API that we are exposing -- the public facing API
-# it might be a subset of whats available from Prisma/GraphQL
+# this is the API that we are exposing -- the public facing API.
+# It might be a subset of whats available from Prisma/GraphQL
 
 # type Dog {
 #  name: String!
@@ -17,7 +17,9 @@
 
 # there is no standard import in graphql -- this is a prisma specific syntax
 # doing an import to get the Item "as is" so I dont have to retype it here
+# the # sign below is the actual syntax (via a comment)
 # import * from './generated/prisma.graphql'
+
 type Mutation {
     createItem(title: String, description: String, price: Int, 
         image: String, largeImage: String) : Item!
