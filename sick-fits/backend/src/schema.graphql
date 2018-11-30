@@ -18,11 +18,13 @@
 # there is no standard import in graphql -- this is a prisma specific syntax
 # doing an import to get the Item "as is" so I dont have to retype it here
 # the # sign below is the actual syntax (via a comment)
+
 # import * from './generated/prisma.graphql'
 
 type Mutation {
     createItem(title: String, description: String, price: Int, 
         image: String, largeImage: String) : Item!
+
     updateItem(id: ID!, title:String, description:String, price:Int): Item!
 }
 

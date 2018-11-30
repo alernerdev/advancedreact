@@ -6,6 +6,7 @@ import formatMoney from "../lib/formatMoney";
 import ErrorMessage from "./ErrorMessage";
 import Router from 'next/router';
 
+// this takes arguments
 const CREATE_ITEM_MUTATION = gql`
   mutation CREATE_ITEM_MUTATION(
     $title: String!
@@ -26,7 +27,7 @@ const CREATE_ITEM_MUTATION = gql`
   }
 `;
 
-export default class CreateItem extends Component {
+class CreateItem extends Component {
   state = {
     title: "",
     description: "",
@@ -59,6 +60,9 @@ export default class CreateItem extends Component {
   }
 
   render() {
+    /* this is a Render Prop. The child of a mutation is a function that can return
+    differnt UI elements depending on the function arguments
+    */
     return (
       <Mutation mutation={CREATE_ITEM_MUTATION} variables={this.state}>
         {(createItem, { loading, error, called, data }) => (
@@ -137,4 +141,5 @@ export default class CreateItem extends Component {
   }
 }
 
+export default CreateItem;
 export { CREATE_ITEM_MUTATION };

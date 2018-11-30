@@ -29,8 +29,15 @@ const ALL_ITEMS_QUERY = gql`
   }
 `;
 
-export default class Items extends Component {
+/* this is a Render Prop approach: 
+  we are placing a component in the render and the 
+  child of a component is a function that gives you different results back:
+    - a loading state, error, or a list of items
+*/
+class Items extends Component {
   render() {
+    // data is coming back inside the function and I am "spreading" out those payload pieces
+    // that I am interested in
     return (
       <Center>
         <Query query={ALL_ITEMS_QUERY}>
@@ -52,4 +59,5 @@ export default class Items extends Component {
   }
 }
 
+export default Items;
 export { ALL_ITEMS_QUERY };

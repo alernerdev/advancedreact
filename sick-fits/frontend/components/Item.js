@@ -1,5 +1,9 @@
 import React, { Component } from "react";
+
+// will check props passed to your components against definitions provided, 
+// and warn in development if they don’t match.
 import PropTypes from "prop-types";
+
 import Link from "next/link";
 
 import Title from "./styles/Title";

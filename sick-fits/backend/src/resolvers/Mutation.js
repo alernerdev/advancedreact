@@ -1,7 +1,7 @@
 /* mutations in this file have to match whats in the schema */
 
 const Mutations = {
-/*    
+    /*    
     createDog(parent, args, ctx, info) {
         global.dogs = global.dogs || [];
 
@@ -12,7 +12,8 @@ const Mutations = {
         global.dogs.push(newDog);
         return newDog;
     }
-*/
+    */
+
     async createItem(parent, args, ctx, info) {
         // TODO: check if they are logged in
 
@@ -24,6 +25,7 @@ const Mutations = {
             }
         }, info);
 
+        // console.log('in mutation.js createItem() info is' + JSON.stringify(info, undefined, 2));
         return item;
     },
     updateItem(parent, args, ctx, info) {

@@ -18,11 +18,10 @@ class MyApp extends App {
   }
 
   render() {
-    // the apollo shows up here because withData at the bottom injects it
+    // the apollo shows up here because withData at the bottom of the file injects it
     const { Component, apollo, pageProps } = this.props;
 
-    // the container surrounds the content of every page
-    // we come to
+    // the container surrounds the content of every page we come to
     return (
       <Container>
         <ApolloProvider client={apollo}>
